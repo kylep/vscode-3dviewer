@@ -1,0 +1,32 @@
+{
+  "reviewed_on": "2026-10-19",
+  "extension": "local-reviewed.vscode-3dviewer",
+  "version": "0.2.3",
+  "source_commit": "c3a733fb0ccfc6d41e7a96c6a772f56d77a98edc",
+  "upstream_commit": "95408588d4f2987f0ae579b83e543f3f364bc467",
+  "vsix_sha256": "44de50a6e3afc65fe216a8b7d0d6846c704f010f96aca8e51b55ebdab20a8e40",
+  "auto_update_pinned": true,
+  "installed_file_hashes_verified": true,
+  "native_vscode_render": {
+    "passed": true,
+    "extension": "local-reviewed.vscode-3dviewer",
+    "version": "0.2.3",
+    "triangles": 12,
+    "vertices": 36
+  },
+  "browser_security_checks": [
+    "12-triangle STL WebGL render",
+    "wireframe/fit controls",
+    "nonce CSP blocks inline script",
+    "eval messages ignored",
+    "connect-src blocks fetch",
+    "malformed STL",
+    "oversized binary count",
+    "OBJ name injection and external material ignored",
+    "PLY render"
+  ],
+  "dependency_audit": "0 known vulnerabilities",
+  "ci": "https://github.com/kylep/vscode-3dviewer/actions/runs/39356437832",
+  "ci_conclusion": "success",
+  "scope": "Focused review; read-only STL/OBJ/PLY viewer. See SECURITY-REVIEW.md for findings and limitations."
+}

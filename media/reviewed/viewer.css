@@ -1,0 +1,8 @@
+html,body {margin:0;height:100%;overflow:hidden;color:var(--vscode-editor-foreground,#ddd);background:var(--vscode-editor-background,#20242c);font:13px system-ui;}
+body {display:flex;flex-direction:column;}
+header {padding:10px;display:flex;align-items:center;gap:16px;min-height:28px;}
+button {padding:5px 12px;cursor:pointer;}
+label {white-space:nowrap;}
+#status {overflow-wrap:anywhere;}
+#viewport {flex:1;min-height:0;}
+canvas {display:block;}

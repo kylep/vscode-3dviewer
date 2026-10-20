@@ -1,6 +1,11 @@
-.vscode/**
-out/**/*.map
-src/**
-node_modules/**
-.gitignore
-tsconfig.json
+**
+!package.json
+!README.md
+!LICENSE.md
+!icon.png
+!out/extension.js
+!out/MeshViewerProvider.js
+!out/model.js
+!media/reviewed/viewer.js
+!media/reviewed/viewer.css
+!THIRD-PARTY-NOTICES.txt

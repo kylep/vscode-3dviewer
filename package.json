@@ -1,167 +1,78 @@
 {
-    "name": "vscode-3dviewer",
-    "displayName": "3D Viewer for VSCode",
-    "description": "Preview 3D models in VSCode",
-    "version": "0.2.2",
-    "publisher": "slevesque",
-    "license": "LICENSE.md",
-    "icon": "icon.png",
-    "bugs": {
-        "url": "https://github.com/stef-levesque/vscode-3dviewer/issues"
-    },
-    "homepage": "https://github.com/stef-levesque/vscode-3dviewer",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/stef-levesque/vscode-3dviewer.git"
-    },
-    "galleryBanner": {
-        "color": "#0075c3",
-        "theme": "dark"
-    },
-    "engines": {
-        "vscode": "^1.49.0"
-    },
-    "keywords": [
-        "vscode",
-        "3d",
-        "mesh",
-        "viewer",
-        "webgl",
-        "3ds",
-        "dae",
-        "Collada",
-        "fbx",
-        "obj",
-        "stl"
-    ],
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCustomEditor:3dviewer.viewer",
-        "onCustomEditor:3dviewer.editor"
-    ],
-    "main": "./out/extension",
-    "contributes": {
-        "customEditors": [
-            {
-                "viewType": "3dviewer.viewer",
-                "displayName": "3D Mesh Viewer",
-                "selector": [
-                    {
-                        "filenamePattern": "*.3ds"
-                    },
-                    {
-                        "filenamePattern": "*.dae"
-                    },
-                    {
-                        "filenamePattern": "*.fbx"
-                    },
-                    {
-                        "filenamePattern": "*.obj"
-                    },
-                    {
-                        "filenamePattern": "*.stl"
-                    },
-                    {
-                        "filenamePattern": "*.ply"
-                    }
-                ]
-            },
-            {
-                "viewType": "3dviewer.editor",
-                "displayName": "3D Mesh Editor",
-                "selector": [
-                    {
-                        "filenamePattern": "*.3ds"
-                    },
-                    {
-                        "filenamePattern": "*.dae"
-                    },
-                    {
-                        "filenamePattern": "*.fbx"
-                    },
-                    {
-                        "filenamePattern": "*.obj"
-                    },
-                    {
-                        "filenamePattern": "*.stl"
-                    },
-                    {
-                        "filenamePattern": "*.ply"
-                    }
-                ]
-            }
-        ],
-        "configuration": {
-            "title": "3dviewer",
-            "properties": {
-                "3dviewer.wireframe": {
-                    "type": "boolean",
-                    "description": "Display mesh in wireframe mode",
-                    "default": false
-                },
-                "3dviewer.background": {
-                    "type": "string",
-                    "description": "Default color for the background",
-                    "default": "#8f8f8f"
-                },
-                "3dviewer.boundingBox": {
-                    "type": "boolean",
-                    "description": "Display a bounding box around the model",
-                    "default": false
-                },
-                "3dviewer.grid": {
-                    "type": "boolean",
-                    "description": "Display a grid at the origin",
-                    "default": true
-                },
-                "3dviewer.gridSize": {
-                    "type": "number",
-                    "description": "Size of the grid",
-                    "default": 32
-                },
-                "3dviewer.near": {
-                    "type": "number",
-                    "description": "Distance for the near plane",
-                    "default": 0.01
-                },
-                "3dviewer.far": {
-                    "type": "number",
-                    "description": "Distance for the far plane",
-                    "default": 1000000
-                },
-                "3dviewer.limitFps": {
-                    "type": "number",
-                    "description": "Max fps (use 0 for no limit)",
-                    "default": 0
-                },
-                "3dviewer.hotReload": {
-                    "type": "boolean",
-                    "description": "Enable hot reload mode for viewer",
-                    "default": true
-                },
-                "3dviewer.hotReloadAutomatically": {
-                    "type": "boolean",
-                    "description": "Enable this to reload models without the question popup",
-                    "default": false
-                }
-            }
-        }
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "lint": "tslint -p ./",
-        "watch": "tsc -w -p ./"
-    },
-    "devDependencies": {
-        "@types/dat-gui": "^0.6.3",
-        "@types/mocha": "^2.2.42",
-        "@types/node": "^12.12.0",
-        "@types/three": "^0.84.30",
-        "@types/vscode": "^1.45.1",
-        "@types/webgl-ext": "0.0.31",
-        "typescript": "^3.8.3"
-    }
+  "name": "vscode-3dviewer",
+  "displayName": "3D Viewer (Reviewed Local)",
+  "description": "Reviewed local read-only STL, OBJ and PLY previews; no network or export commands.",
+  "version": "0.2.3",
+  "publisher": "local-reviewed",
+  "license": "MIT",
+  "icon": "icon.png",
+  "bugs": {
+    "url": "https://github.com/kylep/vscode-3dviewer/issues"
+  },
+  "homepage": "https://github.com/kylep/vscode-3dviewer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kylep/vscode-3dviewer.git"
+  },
+  "galleryBanner": {
+    "color": "#0075c3",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "keywords": [
+    "vscode",
+    "3d",
+    "mesh",
+    "viewer",
+    "webgl",
+    "3ds",
+    "dae",
+    "Collada",
+    "fbx",
+    "obj",
+    "stl"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:3dviewer.viewer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "3dviewer.viewer",
+        "displayName": "3D Mesh Viewer (Reviewed Local)",
+        "priority": "option",
+        "selector": [
+          {
+            "filenamePattern": "*.stl"
+          },
+          {
+            "filenamePattern": "*.obj"
+          },
+          {
+            "filenamePattern": "*.ply"
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p . && node scripts/build-webview.cjs",
+    "test": "npm run compile && node --test tests/*.test.cjs",
+    "test:browser": "node scripts/browser-smoke.cjs",
+    "package": "npm run compile && python3 scripts/build-vsix.py"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/vscode": "1.100.0",
+    "typescript": "5.9.3",
+    "esbuild": "0.28.2",
+    "three": "0.186.1",
+    "@playwright/test": "1.62.1"
+  }
 }

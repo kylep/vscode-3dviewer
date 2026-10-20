@@ -1,19 +1,19 @@
 {
-    "compilerOptions": {
-        "skipLibCheck": true,
-        "module": "commonjs",
-        "target": "es2019",
-        "lib": [
-            "ES2019"
-        ],
-        "outDir": "out",
-        "sourceMap": true,
-        "strict": true,
-        "rootDir": "src",
-    },
-    "exclude": [
-        "node_modules",
-        "node_modules/@types",
-        ".vscode-test"
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2022",
+    "outDir": "out",
+    "rootDir": "src",
+    "strict": true,
+    "types": [
+      "node",
+      "vscode"
     ],
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/extension.ts",
+    "src/MeshViewerProvider.ts",
+    "src/model.ts"
+  ]
 }
